@@ -1,36 +1,47 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react'
-import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
-import WrappertContainer from '../../Components/WrapperContainer/'
-import RNRestart from 'react-native-restart'
-import navigationStrings from '../../navigation/navigationStrings';
-import strings, { changeLanguage } from '../../constants/lang';
+import { View, Text, SafeAreaView, TouchableOpacity, ImageBackground } from 'react-native';
+import { styles } from './styles';
+import WrapperContainer from '../../Components/WrapperContainer';
+import imagePath from '../../constants/imagePath';
+import TextInputcomponent from '../../Components/TextInputComp';
+import { scale, verticalScale, moderateScale, moderateVerticalScale } from 'react-native-size-matters';
+
 
 
 
 const Login = ({ navigation }) => {
 
-  const onchangeLang = (key) => {
-    changeLanguage(key);
-    //RNRestart.Restart();
-
-
-
-  }
   return (
+    <WrapperContainer>
 
-    <SafeAreaView>
-      <View style={{ height: '100%', width: '100%', }}>
-        <TouchableOpacity onPress={() => navigation.navigate(navigationStrings.CHOOSE_ACCOUNT)}>
-          <Text style={{ color: 'black', alignSelf: 'center', fontSize: 50 }}>{strings.LOGIN}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={onchangeLang('en')}>   
-     <Text>{strings.URDU}</Text>
-        </TouchableOpacity>
+      <View style={styles.container}>
+        <ImageBackground style={styles.imagestyle}
+          source={imagePath.flower_image}>
+          <Text style={styles.logintext}>LOGIN</Text>
+        </ImageBackground>
 
-      </View> 
+        <View style={styles.inputview}>
+          <TextInputcomponent
+            label='enter email'
+            placeHolder='enter email'
+            container={{ marginBottom: moderateVerticalScale(28) }}
+            keyboardType='email-address' />
 
-    </SafeAreaView>
+          <TextInputcomponent
+            label='Enter password'
+            placeHolder='enter password'
+            secureTextEntry={true}
+          />
+
+        </View>
+      </View>
+
+
+
+
+    </WrapperContainer>
+
+
   )
 }
 
