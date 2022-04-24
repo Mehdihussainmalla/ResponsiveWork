@@ -28,6 +28,28 @@ export const styles = StyleSheet.create({
         paddingVertical:moderateVerticalScale(30)
 
     },
+    forgetview:{
+        alignSelf:'flex-end',
+        marginVertical:moderateVerticalScale(24)
+    },
+    forgettext:{
+        fontSize:scale(14),
+        fontFamily:FontFamily.mulishMedium,
+        color:colors.lightSkyB
+    },
+    addview:{
+        flexDirection:'row',
+        justifyContent:'center',
+        margin:moderateScale(14)
+    },
+    notamem:{
+        fontSize:scale(13)
+    },
+    joinnow:{
+        fontSize:scale(15),
+        fontFamily:FontFamily.mulishSemiBold,
+        color:colors.lightSkyB
+    }
    
 
 })

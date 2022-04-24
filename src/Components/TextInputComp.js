@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
 import { moderateScale, moderateVerticalScale, scale } from 'react-native-size-matters';
 import FontFamily from '../styles/FontFamily';
 
@@ -8,18 +8,28 @@ const TextInputcomponent = ({
     onChangetext = () => { },
     label = '',
     container = {},
+    rightIcon,
+    onPress,
     ...props
 }) => {
 
     return (
         <View style={{ ...styles.container, ...container }}>
             <Text style={styles.labelstyle}>{label}</Text>
-            <TextInput style={styles.input}
-                onChangeText={onChangetext}
-                placeholder={placeHolder}
-                {...props}
-            />
 
+            <View style={styles.flexview}>
+
+                <TextInput style={styles.input}
+                    onChangeText={onChangetext}
+                    placeholder={placeHolder}
+                    {...props} />
+                {!!rightIcon ? <TouchableOpacity  onPress={onPress}
+                activeOpacity={0.8}>
+                    <Image source={rightIcon}
+                     />
+                </TouchableOpacity> : null}
+
+            </View>
         </View>
     );
 };
@@ -40,8 +50,15 @@ const styles = StyleSheet.create({
     labelstyle: {
         fontSize: scale(16),
         padding: moderateVerticalScale(8),
-        fontFamily: FontFamily.mulishBold
+        fontFamily: FontFamily.mulishBold,
+        
 
-    }
+    },
+    flexview:{ 
+        flexDirection: 'row',
+    justifyContent:'space-between',
+      alignContent:'space-between', 
+    alignItems: 'center' 
+}
 });
 export default TextInputcomponent

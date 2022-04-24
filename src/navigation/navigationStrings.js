@@ -5,6 +5,7 @@ export default {
     HOME : 'Home',
     SET_PASSWORD:'Set_Password',
     REGISTER :'Register',
+    TAB_ROUTES :'Tab routes'
 
     
 }
