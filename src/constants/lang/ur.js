@@ -26,7 +26,10 @@ export default {
     ENTER_ADDRESS:'پتہ درج کریں',
     ENTER_ROLL_NUMBER:'رول نمبر درج کریں۔',
     ENTER_PHONE_NUMBER:'فون نمبر درج کریں',
-    SUBMIT:'جمع کرائیں'
+    SUBMIT:'جمع کرائیں',
+    NOT_A_MEMBER :'رکن نہیں؟',
+    JOIN_NOW:'ابھی شامل ہوں',
+    FORGOT_PASSWORD:"پاسورڈ بھول گے",
     
 
 }

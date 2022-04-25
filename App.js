@@ -1,6 +1,8 @@
 import React,{useEffect} from 'react'
 import Routes from './src/navigation/Routes'
 import strings from './src/constants/lang'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 
 
@@ -21,7 +23,7 @@ const App = () => {
         strings.setLanguage('en')
       }
     } catch (error) {
-      console.log("error occurred in ")
+      console.log("error occurred in language change")
     }
   }
 

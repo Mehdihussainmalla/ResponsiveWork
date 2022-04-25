@@ -27,6 +27,9 @@ export default {
      ENTER_ADDRESS:`entrer l'adresse`,
      ENTER_ROLL_NUMBER:'esaisir le numéro de matricule',
      ENTER_PHONE_NUMBER:'entrez le numéro de téléphone',
-     SUBMIT :'NOUS FAIRE PARVENIR'
+     SUBMIT :'NOUS FAIRE PARVENIR',
+     NOT_A_MEMBER :'pas un membre?',
+     JOIN_NOW:'Adhérer maintenant',
+     FORGOT_PASSWORD:'mot de passe oublié'
 
 }

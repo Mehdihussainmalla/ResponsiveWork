@@ -25,6 +25,9 @@ export default  {
     ENTER_ROLL_NUMBER:'enter roll number',
     ENTER_PHONE_NUMBER:'enter phone number',
     SUBMIT :'submit',
+    NOT_A_MEMBER :'Not a Member?',
+    JOIN_NOW:'join now',
+    FORGOT_PASSWORD:'forgot password?'
     
     
     
